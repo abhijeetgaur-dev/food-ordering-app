@@ -59,6 +59,12 @@ body {
 
 }
 
+.filter-btn{
+
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
 .res-card{
     background-color: #282424;
     width:200px;

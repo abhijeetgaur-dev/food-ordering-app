@@ -24,16 +24,30 @@ body {
     margin: none;
     padding: none;
     margin: 0%;
+    border-bottom: 2px solid;
     padding: 0%;
 }
 .logo-container {
     margin: 0%;
     padding: 0%;
+    padding-top: 20px;
 }
 .header-logo{
     width: 150px;
 }
+.login-btn-container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding:30px;
+    padding-bottom:0px;
 
+}
+
+.login-btn{
+    height:2rem;
+    margin-left: 270px;
+
+}
 
 .nav-items{
     font-size: 20px;
@@ -45,6 +59,37 @@ body {
 .nav-items > li {
     margin: 10px;
 }
+.sub-header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-container{
+    padding: 20px;
+    
+}
+.search-input{
+    padding:3px;
+    margin-left:30px;
+}
+
+.search-btn{
+    padding:3px;
+}
+
+.filter-btn{
+    
+    margin-left: 30px;
+    margin-top: 20px;
+    padding:3px;
+    
+}
+.reset-btn{
+    margin-left: 30px;
+    margin-top: 20px;
+    padding:3px;
+    
+}
 
 .res-container{
     display: flex;
@@ -53,26 +98,34 @@ body {
     
 }
 
-.search{
-    padding-top: 40px;
-    padding-left: 40px;
-
-}
-
-.filter-btn{
-
-    margin-left: 30px;
-    margin-top: 40px;
-}
-
 .res-card{
     background-color: #282424;
     width:200px;
     padding: 5px;
     filter: brightness(90%);
     border-radius: 7px;
+    margin: 10px;
+    align-content: flex-start;
 
 }
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding : 40px;
+    padding-top: 120px;
+}
+
+.shimmer-card{
+    background-color: #282424;
+    width:200px;
+    padding: 5px;
+    filter: brightness(90%);
+    border-radius: 7px;
+    height:300px;
+    margin: 10px;
+}
+
 
 .res-card:hover{
     border: 1px solid #0f0f0f;
@@ -83,10 +136,12 @@ body {
 }
 
 .card-logo{
-    width:100%;
+    width: 190px;
+    height: 200px;
+    margin: 5px;
+
 }
 
 .card-logo:hover{
-    width:100%;
     filter: brightness(120%);
 }

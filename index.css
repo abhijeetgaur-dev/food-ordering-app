@@ -10,7 +10,10 @@ body {
     padding: 0%;
 
 }
+/* 
+.body-container{
 
+} */
 .app {
     margin: 0%;
     padding: 0%;
@@ -34,6 +37,8 @@ body {
 }
 .header-logo{
     width: 150px;
+    padding-top:30px;
+    padding-right: 10px;
 }
 .login-btn-container{
     display: flex;
@@ -94,10 +99,9 @@ body {
 .res-container{
     display: flex;
     flex-wrap: wrap;
-    padding: 40px;
-    
+    justify-content: space-between;
+    padding: 30px;
 }
-
 .res-card{
     background-color: #282424;
     width:200px;
@@ -145,3 +149,8 @@ body {
 .card-logo:hover{
     filter: brightness(120%);
 }
+
+.menu-logo{
+    width: 200px;
+}
+

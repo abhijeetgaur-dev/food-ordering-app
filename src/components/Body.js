@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import resData from "../utils/resData";
 import { SWIGGY_API } from "../utils/constants";
@@ -30,7 +31,7 @@ const Body = () => {
     //   return <Shimmer />
     // }
     return (restaurantData.length === 0)? <Shimmer/> :(
-      <div className="body">
+      <div className="body-container">
         <div className="sub-header">
           <div className="search-container">
             <input className="search-input" type="text" value= {searchText} onChange={(e)=>{
@@ -60,7 +61,7 @@ const Body = () => {
 
         <div className="res-container">
           {restaurantData.map((restaurant) => (
-              <RestaurantCard key ={restaurant.info.id} resData = {restaurant} />
+              <Link to={"/restaurants/"+ restaurant.info.id} key ={restaurant.info.id} ><RestaurantCard  resData = {restaurant} /></Link>
           ) )}
         </div>
       </div>

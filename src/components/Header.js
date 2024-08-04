@@ -1,15 +1,17 @@
 import { CDN_LOGO } from "../utils/constants";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [loginBtn, setLoginBtn] = useState("Login");
     return (
       <div className="header">
-        <div className="logo-container">
-          <img
+          <Link to= "/"><img
             src={CDN_LOGO}
             className="header-logo"
           ></img>
+          </Link>
+        <div className="logo-container">
 
         </div>
         
@@ -18,10 +20,18 @@ const Header = () => {
         <button className="login-btn" onClick={()=>(loginBtn==="Login"?setLoginBtn("Logout"):setLoginBtn("Login"))}>{loginBtn}</button>
         </div>
           <ul className="nav-items">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact Us</li>
-            <li>Cart</li>
+            <li>
+              <Link to = "/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="">Cart</Link>
+            </li>
           </ul>
         </div>
       </div>

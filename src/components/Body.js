@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import RestaurantCard from "./RestaurantCard";
-import resData from "../utils/resData";
+import RestaurantCard from "./RestaurantCard";``
 import { SWIGGY_API } from "../utils/constants";
 import {Shimmer} from "./Shimmer"
+
 
 const Body = () => {
   const [restaurantData, setRestaurantData] = useState([]);
   const [searchText, setSearchText] = useState("");
+
 
   console.log("Body Rendered")
 
@@ -26,6 +27,8 @@ const Body = () => {
     fetchData();
     console.log("useEffect Called")
   }, [])
+
+  
 
     // if(restaurantData.length === 0){
     //   return <Shimmer />

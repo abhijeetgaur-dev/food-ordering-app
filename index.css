@@ -154,3 +154,9 @@ body {
     width: 200px;
 }
 
+.menu-card{
+    align-self: center;
+    padding:60px;
+    justify-content: center;
+    
+}

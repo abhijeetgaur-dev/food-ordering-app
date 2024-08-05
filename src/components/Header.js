@@ -1,6 +1,7 @@
 import { CDN_LOGO } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [loginBtn, setLoginBtn] = useState("Login");
@@ -16,10 +17,15 @@ const Header = () => {
         </div>
         
         <div className="navbar">
+        <div> 
+          <h3>
+           </h3>
+        </div>
         <div className="login-btn-container">
         <button className="login-btn" onClick={()=>(loginBtn==="Login"?setLoginBtn("Logout"):setLoginBtn("Login"))}>{loginBtn}</button>
         </div>
           <ul className="nav-items">
+            <li>{useOnlineStatus()===true?"✅":"🔴"}</li>
             <li>
               <Link to = "/">Home</Link>
             </li>

@@ -2,13 +2,13 @@
   "name": "swiggy-clone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
-  "author": "",
+  "author": "Abhijeet Gaur",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.12.0"

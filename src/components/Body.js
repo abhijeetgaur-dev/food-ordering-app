@@ -35,26 +35,26 @@ const Body = () => {
     // }
     return (restaurantData.length === 0)? <Shimmer/> :(
       <div className="body-container">
-        <div className="sub-header">
-          <div className="search-container">
-            <input className="search-input" type="text" value= {searchText} onChange={(e)=>{
+        <div className="flex justify-between mb-20">
+          <div>
+            <input className="bg-white shadow-md border border-black border-solid py-1 ml-10" type="text" value= {searchText} onChange={(e)=>{
               setSearchText(e.target.value)
               console.log(searchText)
             }}></input>
-            <button className="search-btn" onClick={()=>{
+            <button className="bg-orange-400 px-3 py-1 border border-orange border-solid mx-3" onClick={()=>{
                 const filteredData = restaurantData.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                 setRestaurantData(filteredData);
             }}>Search</button>
           </div>
-          <div className="filter">
-            <button className="filter-btn" 
+          <div className="mr-10">
+            <button className="px-2 py-1 border border-solid bg-orange-400 mx-2" 
               onClick = {() =>{
                 const newData = restaurantData.filter((res) => res.info.avgRating >4.5);
                 setRestaurantData(newData);
               }}>
                 Top Rated Restaurant
             </button>
-            <button className="reset-btn" 
+            <button className="px-2 py-1 border border-solid bg-orange-400 mx-2" 
             //onClick={() =>setRestaurantData(dataStatic)}
             >
                 Reset Filter
@@ -62,7 +62,7 @@ const Body = () => {
           </div>
           </div>
 
-        <div className="res-container">
+        <div className="flex flex-wrap justify-between">
           {restaurantData.map((restaurant) => (
               <Link to={"/restaurants/"+ restaurant.info.id} key ={restaurant.info.id} ><RestaurantCard  resData = {restaurant} /></Link>
           ) )}

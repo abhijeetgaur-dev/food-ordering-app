@@ -17,7 +17,7 @@ const RestaurantMenu = () =>{
     // const  {menuArray}  = resMenu?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.itemCards || {};
        const  menuArray  = resMenu?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.itemCards || resMenu?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.carousel|| {};
 
-    
+    console.log("menuArray")
     console.log(menuArray)
 
     return(

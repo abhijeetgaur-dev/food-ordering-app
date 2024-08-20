@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import RestaurantCard from "./RestaurantCard";``
+import RestaurantCard from "./RestaurantCard";
 import { SWIGGY_API } from "../utils/constants";
 import {Shimmer} from "./Shimmer"
+
 
 
 const Body = () => {
   const [restaurantData, setRestaurantData] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-
-  console.log("Body Rendered")
+  // const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+ 
+ 
 
   let dataStatic;
 
@@ -18,14 +20,17 @@ const Body = () => {
     const Data = await fetch (SWIGGY_API);
     const jsonData = await Data.json();
     dataStatic = jsonData;
-    console.log(jsonData);
+    console.log(jsonData)
     setRestaurantData(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
+    console.log(restaurantData)
+    
     
   }
   
   useEffect(() => {
     fetchData();
     console.log("useEffect Called")
+
   }, [])
 
   
@@ -64,7 +69,10 @@ const Body = () => {
 
         <div className="flex flex-wrap justify-between">
           {restaurantData.map((restaurant) => (
-              <Link to={"/restaurants/"+ restaurant.info.id} key ={restaurant.info.id} ><RestaurantCard  resData = {restaurant} /></Link>
+            
+              <Link to={"/restaurants/"+ restaurant.info.id} key ={restaurant.info.id} >
+                    <RestaurantCard  resData = {restaurant} />
+                </Link>
           ) )}
         </div>
       </div>

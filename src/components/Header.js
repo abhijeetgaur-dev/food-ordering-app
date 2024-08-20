@@ -4,11 +4,12 @@ import { CDN_LOGO } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import logo from "../../public/images/logo.webp"
 
 const Header = () => {
  
   useGSAP(()=>{
-    gsap.to('#header-container', {height:80,
+    gsap.to('#header-container', {height:150,
       opacity: 1,
       delay: 1,
       stagger: 0.25
@@ -17,10 +18,10 @@ const Header = () => {
 
   const [loginBtn, setLoginBtn] = useState("Login");
     return (
-      <div id="header-container" className="flex justify-between bg-amber-800 shadow-gray-950 shadow-sm mb-10 opacity-0 h-0">
+      <div id="header-container" className="flex justify-between bg-[#2c3232] shadow-black shadow-sm mb-10 opacity-0 h-72">
           <Link to= "/"><img
-            src={CDN_LOGO}
-            className="w-24 m-3"
+            src={logo}
+            className="	object-contain h-28 w-56 mx-5 my-6" 
           ></img>
           </Link>
         <div className="logo-container">

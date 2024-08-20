@@ -9,6 +9,7 @@ import RestaurantMenu from "./components/RestaurantMenu"
 // import Grocery from "./components/Grocery";
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
 import { Shimmer } from "./components/Shimmer";
+import Footer from "./components/Footer"
 
 
 const Grocery = lazy(() => import("./components/Grocery"))
@@ -18,6 +19,7 @@ const AppLayout = () => {
     <div className="app">
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };

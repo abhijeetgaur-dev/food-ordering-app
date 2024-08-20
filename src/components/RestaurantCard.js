@@ -15,7 +15,7 @@ const RestaurantCard = ({ resData }) => {
 
 
     return (
-      <div className="m-4 w-[200px] bg-[rgb(87,84,84)] h-[450px] rounded-md shadow-gray-950 shadow-sm opacity-0" id="res-card">
+      <div className="m-4 w-[200px] bg-[#4A5D5E] h-[450px] rounded-md shadow-gray-950 shadow-sm opacity-0" id="res-card">
         <img
           className="h-52 w-52 mb-4 shadow-xl" src={CDN_LOGO_URL + resData.info.cloudinaryImageId}
         ></img>

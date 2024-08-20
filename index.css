@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(68, 64, 64);
-    color:azure;
+    background-color: #394343;
+    color:#D2DBC8;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;

@@ -18,7 +18,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Outlet />
+      <Outlet className=" min-h-screen pb-32" />
       <Footer />
     </div>
   );

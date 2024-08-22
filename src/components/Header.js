@@ -18,7 +18,7 @@ const Header = () => {
 
   const [loginBtn, setLoginBtn] = useState("Login");
     return (
-      <div id="header-container" className="flex justify-between bg-[#2c3232] shadow-black shadow-sm mb-10 opacity-0 h-72">
+      <div id="header-container" className="flex justify-between bg-[#2c3232] shadow-black shadow-sm mb-10 opacity-0 ">
           <Link to= "/"><img
             src={logo}
             className="	object-contain h-28 w-56 mx-5 my-6" 

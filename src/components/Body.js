@@ -11,8 +11,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   // const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
- 
- 
+
 
   let dataStatic;
 
@@ -22,23 +21,22 @@ const Body = () => {
     dataStatic = jsonData;
     console.log(jsonData)
     setRestaurantData(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
-    console.log(restaurantData)
-    
     
   }
-  
+
+
   useEffect(() => {
     fetchData();
     console.log("useEffect Called")
 
   }, [])
 
-  
-
-    // if(restaurantData.length === 0){
-    //   return <Shimmer />
-    // }
-    return (restaurantData.length === 0)? <Shimmer/> :(
+     
+    if (restaurantData.length === 0){
+      return <Shimmer />
+    }
+    
+    return(
       <div className=" min-h-screen pb-32" >
         <div className="flex justify-between mb-25">
           <div>

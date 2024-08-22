@@ -21,9 +21,9 @@ const RestaurantMenu = () =>{
     console.log(menuArray)
 
     return(
-        <div className="w-1/2 p-4 mx-auto text-center border rounded-md bg-neutral-800  min-h-screen mb-32">
-            <h1 className="text-center text-4xl  m-auto font-extrabold pb-11">{name}</h1>
-            <img src={CDN_LOGO_URL+cloudinaryImageId} className=" inset-0 w-100 h-100 mx-auto my-auto rounded-xl drop-shadow-2xl " />
+        <div className="w-1/2 p-4 mx-auto text-center  bg-neutral-800  min-h-screen mb-32">
+            <h1 className="text-center text-4xl  m-auto font-extrabold pb-2 border-b-2 border-[#2f3333]  ">{name}</h1>
+            <img src={CDN_LOGO_URL+cloudinaryImageId} className=" inset-0 w-100 h-100 mx-auto my-auto rounded-xl drop-shadow-2xl pt-2" />
             <h3 className="text-xl font-semibold py-3">{cuisines.join(", ")}</h3>
             <h3 className="font-medium">{costForTwoMessage}</h3>
             <h3 className="font-medium">{avgRating} Stars</h3>

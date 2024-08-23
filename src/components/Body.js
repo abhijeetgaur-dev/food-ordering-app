@@ -37,7 +37,7 @@ const Body = () => {
     }
     
     return(
-      <div className=" min-h-screen pb-32" >
+      <div className=" w-150 min-w-64 max-w-200 mx-auto p-4" >
         <div className="flex justify-between mb-25">
           <div>
             <input className="bg-white shadow-md border border-black border-solid py-1 ml-10" type="text" value= {searchText} onChange={(e)=>{

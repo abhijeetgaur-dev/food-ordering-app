@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-      <div className="text-center bg-[#2c3232] fixed inset-x-0 bottom-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)]">
+      <div className="text-center bg-[#2c3232] fixed inset-x-0 bottom-0 shadow-[0_-4px_7px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)]">
           <div className="py-4">
           Created by Abhijeet Gaur
           <div className="py-2">
